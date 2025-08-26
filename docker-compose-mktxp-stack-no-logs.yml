@@ -45,7 +45,6 @@ services:
     image: prom/prometheus:latest
     networks:
       mktxp: null
-    ports:
     restart: unless-stopped
     volumes:
     - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
