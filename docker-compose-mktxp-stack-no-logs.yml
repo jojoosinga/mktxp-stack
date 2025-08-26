@@ -28,10 +28,6 @@ services:
     image: grafana/grafana:latest
     networks:
       mktxp: null
-    ports:
-    - protocol: tcp
-      published: 3000
-      target: 3000
     restart: unless-stopped
     volumes:
     -  grafana_storage:/var/lib/grafana
@@ -50,8 +46,6 @@ services:
     networks:
       mktxp: null
     ports:
-    - published: 9090
-      target: 9090
     restart: unless-stopped
     volumes:
     - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
